@@ -1,0 +1,14 @@
+@media screen and (max-width:992px){
+    .hideItems{
+        display: none !important;
+    }
+    .resBg{
+        background-color: black;
+        text-align: center;
+        padding: 20px;
+    }
+    .resBg button{
+        margin: 0 auto 20px auto;
+        width: 90%;
+    }
+}

@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.logoBrand{
+    flex: 1;
+}
+.navbar{
+    height: 64px;
+}
+.navLink,.navAcc{
+    flex: 1;
+    
+}
+.categoryIcon img{
+    height: 30px;
+    margin: 5px 0;
+}
+.categoryIcon li{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.fooFlist{
+    text-underline-offset: 10px;
+}
+
+
+.subtitle{
+    margin-top: -5px;
+    font-weight: 300;
+}

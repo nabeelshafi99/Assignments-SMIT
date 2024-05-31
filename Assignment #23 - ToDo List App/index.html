@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment #23 - ToDo List App</title>
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="todoHead">
+            <h1>TODO APP</h1>
+            <input type="text" placeholder="Enter your task" id="input" />
+            <span class="inputBtn">
+                <button onclick="addTask()">Add Task</button>
+                <button onclick="deleteAll()">Delete All</button> 
+            </span>
+
+        </div>
+        <div class="todoBody">
+            <ul id="todoList">
+            </ul>
+        </div>
+    </div>
+
+
+</body>
+
+<!-- custom javascript -->
+<script src="./app.js"></script>
+
+</html>

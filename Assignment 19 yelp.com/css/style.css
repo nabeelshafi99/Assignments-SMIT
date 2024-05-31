@@ -1,0 +1,155 @@
+.carousel-item{
+    height: 90vh;
+    /* border: 1px solid black; */
+    background-size: cover;
+}
+
+.items1{
+    background-image: url('../images/o.jpg');
+}
+.items2{
+    background-image: url('../images/o\ \(3\).jpg');
+}
+.items3{
+    background-image: url('../images/o\ \(2\).jpg');
+}
+.items4{
+    background-image: url('../images/o\ \(1\).jpg');
+}
+
+
+.bannerMain{
+    position: relative;
+}
+.headerMain{
+    position: absolute;
+    top: 20px;
+    z-index: 1;
+    width: 100%;
+}
+
+.headerSearch{
+    /* border: 1px solid black; */
+    background-color: white;
+}
+
+.headerSearch input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.headerSearch input:focus{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.divider{
+    height: 20px;
+    width: 1px;
+    background-color: rgb(51, 50, 50);
+}
+
+
+.logoBrand{
+    background-image: url('../images/logo_desktop_white.svg');
+    height: 40px;
+    width: 80px;
+    background-repeat: no-repeat;
+}
+
+
+.navbarMenu a{
+    color: white;
+    font-size: 18px;
+}
+
+.loginBtn{
+    /* background-color: rgba(255, 255, 255, .2); */
+    color: white;
+    font-weight: bold;    
+}
+.loginBtn:hover{
+    background-color: rgba(255, 255, 255, .2);
+    color: white;
+}
+.signupBtn{
+    background-color: red;
+
+    color: white;
+    font-weight: bold;    
+}
+
+/* seaction */
+
+.profileImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.postCard{
+    height: 200px;
+}
+    
+.secHeading h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.secDrop{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8)
+}
+
+.catCard i{
+    color: rgba(255, 0, 0, 0.7);
+}
+.catCard:hover{
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footerContainer {
+    background-color: #f7f7f7;
+}
+.footerContainer p{
+    font-size: 14px;
+}
+
+.footer ul{
+    list-style: none;
+    font-size: 14px;
+}
+
+.footer h5{
+    font-size: 16px;
+}
+
+.footer li{
+    padding: 2px 0;
+}
+
+
+.carousel-indicators{
+    position: absolute;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+}
+.carousel-indicators button{
+    height: 80px !important;
+    width: 10px !important;
+}
+
+
+.carousel-item h1{
+    font-weight: bold;
+    font-size: 60px;
+
+}
+.carousel-item .h1{
+    position: absolute;
+    top: 25%;
+    left: 20%;
+    color: white;
+}

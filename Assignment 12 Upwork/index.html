@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upwork | Assignment 12</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div style="position: sticky; top:0;z-index: 99; background-color: white;">
+        <div class="header">
+            <div class="navbar">
+                <div>
+                    <div class="logo">
+                        <img src="./images/Upwork_Logo.svg" alt="">
+                    </div>
+                    <div class="nav_menu">
+                        <ul>
+                            <li>Find Talent</li>
+                            <li>Find Work</li>
+                            <li>Why Upwork</li>
+                            <li>Enterprise</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="nav_search">
+                        <i class="fa-solid fa-magnifying-glass search_icon"></i>
+                        <input type="search" placeholder="Search">
+                        <ul>
+                            <li id="search_text">Talent</li>
+                        </ul>
+                    </div>
+                    <div class="button">
+                        <button id="login">Log in</button>
+                        <button style="background-color: #108A00; color: white;">Sign up</button>
+                        <i class="fa-solid fa-magnifying-glass btn_search"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_list">
+                <ul>
+                    <li>Development & IT</li>
+                    <li>AI Services</li>
+                    <li>Design & Creative</li>
+                    <li>Sales & Marketing</li>
+                    <li>Amin & Customer Support</li>
+                    <li>More</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Header -->
+    <!-- ChaTBOT -->
+    <div class="chat_bot" aria-hidden="true" class="air3-lottie caw-logo"><svg xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" width="512" height="512" focusable="false"
+            preserveAspectRatio="xMidYMid meet"
+            style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+            <defs>
+                <clipPath id="__lottie_element_953">
+                    <rect width="512" height="512" x="0" y="0"></rect>
+                </clipPath>
+                <g id="__lottie_element_962">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_968" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="-61.768001556396484" y1="33.569000244140625" x2="217.38099670410156" y2="-101.80999755859375">
+                    <stop offset="4%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="32%" stop-color="rgb(19,126,39)"></stop>
+                    <stop offset="61%" stop-color="rgb(19,84,78)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_962_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_962"></use>
+                </mask>
+                <g id="__lottie_element_969">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_975" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="-31.816999435424805" y1="126.50599670410156" x2="56.176998138427734" y2="-156.1179962158203">
+                    <stop offset="7%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="16%" stop-color="rgb(139,227,174)"></stop>
+                    <stop offset="25%" stop-color="rgb(133,225,170)"></stop>
+                    <stop offset="35%" stop-color="rgb(161,240,193)"></stop>
+                    <stop offset="44%" stop-color="rgb(189,255,215)"></stop>
+                    <stop offset="59%" stop-color="rgb(105,211,108)"></stop>
+                    <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="87%" stop-color="rgb(19,126,39)"></stop>
+                    <stop offset="100%" stop-color="rgb(19,84,78)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_969_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_969"></use>
+                </mask>
+                <g id="__lottie_element_976">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_982" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156" y2="-16.948999404907227">
+                    <stop offset="0%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="13%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="25%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="39%" stop-color="rgb(73,218,185)"></stop>
+                    <stop offset="52%" stop-color="rgb(1,205,190)"></stop>
+                    <stop offset="63%" stop-color="rgb(10,186,95)"></stop>
+                    <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="87%" stop-color="rgb(40,149,18)"></stop>
+                    <stop offset="100%" stop-color="rgb(60,130,36)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_984">
+                    <path fill="url(#__lottie_element_983)"
+                        d=" M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                    </path>
+                </mask>
+                <linearGradient id="__lottie_element_983" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156" y2="-16.948999404907227">
+                    <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0.30000001192092896"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="13%" stop-opacity="0.6499999761581421"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="25%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="39%" stop-opacity="0.6949999928474426"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="52%" stop-opacity="0.38999998569488525"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="63%" stop-opacity="0.4749999940395355"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="74%" stop-opacity="0.5600000023841858"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="87%" stop-opacity="0.7799999713897705"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_976_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_976"></use>
+                </mask>
+                <g id="__lottie_element_985">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_991" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="-61.768001556396484" y1="33.569000244140625" x2="217.38099670410156" y2="-101.80999755859375">
+                    <stop offset="4%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="32%" stop-color="rgb(19,126,39)"></stop>
+                    <stop offset="61%" stop-color="rgb(19,84,78)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_985_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_985"></use>
+                </mask>
+                <g id="__lottie_element_992">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_998" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="-31.816999435424805" y1="126.50599670410156" x2="56.176998138427734" y2="-156.1179962158203">
+                    <stop offset="7%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="16%" stop-color="rgb(139,227,174)"></stop>
+                    <stop offset="25%" stop-color="rgb(133,225,170)"></stop>
+                    <stop offset="35%" stop-color="rgb(161,240,193)"></stop>
+                    <stop offset="44%" stop-color="rgb(189,255,215)"></stop>
+                    <stop offset="59%" stop-color="rgb(105,211,108)"></stop>
+                    <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="87%" stop-color="rgb(19,126,39)"></stop>
+                    <stop offset="100%" stop-color="rgb(19,84,78)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_992_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_992"></use>
+                </mask>
+                <g id="__lottie_element_999">
+                    <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                        opacity="1" style="display: block;">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="rgb(255,255,255)" fill-opacity="1"
+                                d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <linearGradient id="__lottie_element_1005" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156" y2="-16.948999404907227">
+                    <stop offset="0%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="13%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="25%" stop-color="rgb(145,230,179)"></stop>
+                    <stop offset="39%" stop-color="rgb(73,218,185)"></stop>
+                    <stop offset="52%" stop-color="rgb(1,205,190)"></stop>
+                    <stop offset="63%" stop-color="rgb(10,186,95)"></stop>
+                    <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                    <stop offset="87%" stop-color="rgb(40,149,18)"></stop>
+                    <stop offset="100%" stop-color="rgb(60,130,36)"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_1007">
+                    <path fill="url(#__lottie_element_1006)"
+                        d=" M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                    </path>
+                </mask>
+                <linearGradient id="__lottie_element_1006" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                    x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156" y2="-16.948999404907227">
+                    <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0.30000001192092896"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="13%" stop-opacity="0.6499999761581421"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="25%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="39%" stop-opacity="0.6949999928474426"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="52%" stop-opacity="0.38999998569488525"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="63%" stop-opacity="0.4749999940395355"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="74%" stop-opacity="0.5600000023841858"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="87%" stop-opacity="0.7799999713897705"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                    <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                </linearGradient>
+                <mask id="__lottie_element_999_1" mask-type="alpha">
+                    <use xlink:href="#__lottie_element_999"></use>
+                </mask>
+            </defs>
+            <g clip-path="url(#__lottie_element_953)">
+                <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                    opacity="1" style="display: block;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(255,255,255)" fill-opacity="1"
+                            d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                        </path>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_999_1)" style="display: none;">
+                    <g transform="matrix(-1.4892162084579468,-1.554184913635254,1.554184913635254,-1.4892162084579468,262.75,247.5)"
+                        opacity="0.01698345490590228">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_1005)" mask="url(#__lottie_element_1007)" fill-opacity="1"
+                                d="M0 0 M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_992_1)" style="display: none;">
+                    <g transform="matrix(-1.7880805730819702,-1.3739697933197021,1.3739697933197021,-1.7880805730819702,267.96673583984375,240.97340393066406)"
+                        opacity="0.007000840025804536">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_998)" fill-opacity="1"
+                                d=" M0,109.625 C60.54399871826172,109.625 109.625,60.54399871826172 109.625,0 C109.625,-60.54399871826172 60.54399871826172,-109.625 0,-109.625 C-60.54399871826172,-109.625 -109.625,-60.54399871826172 -109.625,0 C-109.625,60.54399871826172 -60.54399871826172,109.625 0,109.625z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_985_1)" style="display: none;">
+                    <g transform="matrix(-0.1376911997795105,-2.59985613822937,2.59985613822937,-0.1376911997795105,261.947509765625,247.54249572753906)"
+                        opacity="0.0578133047733364">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_991)" fill-opacity="1"
+                                d=" M0,95.91200256347656 C52.97100067138672,95.91200256347656 95.91200256347656,52.97100067138672 95.91200256347656,0 C95.91200256347656,-52.97100067138672 52.97100067138672,-95.91200256347656 0,-95.91200256347656 C-52.97100067138672,-95.91200256347656 -95.91200256347656,-52.97100067138672 -95.91200256347656,0 C-95.91200256347656,52.97100067138672 -52.97100067138672,95.91200256347656 0,95.91200256347656z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_976_1)" style="display: block;">
+                    <g transform="matrix(1.7504345178604126,-1.2526910305023193,1.2526910305023193,1.7504345178604126,262.75,247.5)"
+                        opacity="1">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_982)" mask="url(#__lottie_element_984)" fill-opacity="1"
+                                d="M0 0 M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_969_1)" style="display: block;">
+                    <g transform="matrix(1.6080338954925537,-1.1507824659347534,1.1507824659347534,1.6080338954925537,267.4815979003906,254.38641357421875)"
+                        opacity="1">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_975)" fill-opacity="1"
+                                d=" M0,109.625 C60.54399871826172,109.625 109.625,60.54399871826172 109.625,0 C109.625,-60.54399871826172 60.54399871826172,-109.625 0,-109.625 C-60.54399871826172,-109.625 -109.625,-60.54399871826172 -109.625,0 C-109.625,60.54399871826172 -60.54399871826172,109.625 0,109.625z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g mask="url(#__lottie_element_962_1)" style="display: block;">
+                    <g transform="matrix(1.618092656135559,-1.157981038093567,1.157981038093567,1.618092656135559,262.2823181152344,246.8465118408203)"
+                        opacity="1">
+                        <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                            <path fill="url(#__lottie_element_968)" fill-opacity="1"
+                                d=" M0,95.91200256347656 C52.97100067138672,95.91200256347656 95.91200256347656,52.97100067138672 95.91200256347656,0 C95.91200256347656,-52.97100067138672 52.97100067138672,-95.91200256347656 0,-95.91200256347656 C-52.97100067138672,-95.91200256347656 -95.91200256347656,-52.97100067138672 -95.91200256347656,0 C-95.91200256347656,52.97100067138672 -52.97100067138672,95.91200256347656 0,95.91200256347656z">
+                            </path>
+                        </g>
+                    </g>
+                </g>
+                <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                    opacity="1" style="display: block;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(255,255,255)" fill-opacity="1"
+                            d=" M0,84.70700073242188 C46.78200149536133,84.70700073242188 84.70700073242188,46.78200149536133 84.70700073242188,0 C84.70700073242188,-46.78200149536133 46.78200149536133,-84.70700073242188 0,-84.70700073242188 C-46.78200149536133,-84.70700073242188 -84.70700073242188,-46.78200149536133 -84.70700073242188,0 C-84.70700073242188,46.78200149536133 -46.78200149536133,84.70700073242188 0,84.70700073242188z">
+                        </path>
+                    </g>
+                </g>
+                <g transform="matrix(2.049999952316284,0,0,2.049999952316284,264.78155517578125,263.64990234375)"
+                    opacity="1" style="display: block;">
+                    <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                        <path fill="rgb(20,168,0)" fill-opacity="1"
+                            d=" M24.079999923706055,4.616000175476074 C27.292999267578125,6.456999778747559 30.857999801635742,7.514999866485596 34.58000183105469,7.710999965667725 C34.58000183105469,7.710999965667725 34.58000183105469,7.75 34.58000183105469,7.75 C43.63100051879883,7.75 50.68299865722656,0.46299999952316284 50.68299865722656,-9.920000076293945 C50.68299865722656,-20.30299949645996 43.66999816894531,-27.59000015258789 34.58000183105469,-27.59000015258789 C25.489999771118164,-27.59000015258789 18.594999313354492,-21.71299934387207 16.166000366210938,-2.9070000648498535 C18.202999114990234,0.18799999356269836 20.867000579833984,2.7750000953674316 24.079999923706055,4.616000175476074z M55.42399978637695,-30.645999908447266 C58.12699890136719,-27.94300079345703 60.24300003051758,-24.690000534057617 61.65299987792969,-21.125 C61.65299987792969,-21.125 61.61399841308594,-21.125 61.61399841308594,-21.125 C63.06399917602539,-17.559999465942383 63.72999954223633,-13.758999824523926 63.652000427246094,-9.958999633789062 C63.72999954223633,-6.158999919891357 63.0629997253418,-2.3580000400543213 61.65299987792969,1.2070000171661377 C60.24300003051758,4.771999835968018 58.12699890136719,8.024999618530273 55.42399978637695,10.727999687194824 C52.72100067138672,13.470999717712402 49.46799850463867,15.586000442504883 45.90299987792969,17.075000762939453 C42.3380012512207,18.524999618530273 38.53799819946289,19.229999542236328 34.659000396728516,19.229999542236328 C34.659000396728516,19.229999542236328 33.444000244140625,19.229999542236328 33.444000244140625,19.229999542236328 C28.232999801635742,19.072999954223633 23.100000381469727,17.506000518798828 18.711999893188477,14.762999534606934 C17.027000427246094,13.784000396728516 15.420999526977539,12.64799976348877 13.932000160217285,11.394000053405762 C13.932000160217285,11.394000053405762 9.347999572753906,39.21200180053711 9.347999572753906,39.21200180053711 C9.347999572753906,39.21200180053711 -3.8550000190734863,39.21200180053711 -3.8550000190734863,39.21200180053711 C-3.8550000190734863,39.21200180053711 2.805000066757202,-0.0860000029206276 2.805000066757202,-0.0860000029206276 C-3.1110000610351562,-8.744999885559082 -7.460000038146973,-18.3439998626709 -10.12399959564209,-28.413000106811523 C-10.12399959564209,-28.413000106811523 -10.12399959564209,-9.762999534606934 -10.12399959564209,-9.762999534606934 C-10.12399959564209,7.241000175476074 -21.016000747680664,19.152000427246094 -36.6879997253418,19.152000427246094 C-40.37099838256836,19.270000457763672 -44.05400085449219,18.52400016784668 -47.42300033569336,17.11400032043457 C-50.79199981689453,15.704000473022461 -53.8489990234375,13.588000297546387 -56.31700134277344,10.885000228881836 C-61.2140007019043,5.164999961853027 -63.87799835205078,-2.2009999752044678 -63.643001556396484,-9.762999534606934 C-63.643001556396484,-9.762999534606934 -63.643001556396484,-37.54199981689453 -63.643001556396484,-37.54199981689453 C-63.643001556396484,-37.54199981689453 -50.79199981689453,-37.54199981689453 -50.79199981689453,-37.54199981689453 C-50.79199981689453,-37.54199981689453 -50.79199981689453,-9.762999534606934 -50.79199981689453,-9.762999534606934 C-50.79199981689453,0.46299999952316284 -45.62099838256836,7.75 -36.53099822998047,7.75 C-27.44099998474121,7.75 -22.85700035095215,0.3059999942779541 -22.85700035095215,-9.762999534606934 C-22.85700035095215,-9.762999534606934 -22.85700035095215,-37.54199981689453 -22.85700035095215,-37.54199981689453 C-22.85700035095215,-37.54199981689453 -0.32899999618530273,-37.54199981689453 -0.32899999618530273,-37.54199981689453 C1.1990000009536743,-30.725000381469727 3.510999917984009,-24.06399917602539 6.566999912261963,-17.795000076293945 C7.9770002365112305,-24.024999618530273 11.541999816894531,-29.58799934387207 16.674999237060547,-33.50600051879883 C21.808000564575195,-37.42399978637695 28.232999801635742,-39.46099853515625 34.698001861572266,-39.1870002746582 C38.53799819946289,-39.1870002746582 42.37699890136719,-38.481998443603516 45.94200134277344,-36.99300003051758 C49.46799850463867,-35.542999267578125 52.72100067138672,-33.3489990234375 55.42399978637695,-30.645999908447266z">
+                        </path>
+                    </g>
+                </g>
+            </g>
+        </svg></div>
+    <!-- ChaTBOT -->
+    <!-- Body -->
+    <div class="main_container">
+        <!-- banner start -->
+
+        <div class="hero_banner">
+            <div class="hero_text">
+                <div class="hero_header">
+
+                    <h1>How work </h1>
+                    <h1>should work</h1>
+
+                    <p>Forget the old rules. You can have the best people. </p>
+                    <p>Right now.Right here.</p>
+
+                    <button style="background-color: #108A00; color: white;">Get started</button>
+
+                    <div class="trust">
+                        <p>Trusted by</p>
+                        <img src="./images/microsoft.svg" alt="">
+                        <img src="./images/airbnb.svg" alt="">
+                        <img src="./images/bissell.svg" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="hero_image">
+                <img src="./images/hero_banner.webp" alt="">
+            </div>
+        </div>
+
+    </div>
+
+    <!-- banner end -->
+
+    <!-- chat hero start -->
+
+    <div class="main_caw">
+
+        <div class="caw_hero">
+            <h1>Get instant answer to your Upwork questions</h1>
+            <p>Start a conversation powered by OpenAI technologies.</p>
+            <div class="chat_hero">
+                <p>Hi 👏 I'm here to help your work game with a little help from AI.</p>
+                <p>But first, are you a client hiring for a project? Or a freelancer looking for work?.👀</p>
+                <button>I'm a client looking to hire for a project</button>
+                <button>I'm a freelancer looking for work</button>
+                <p id="caw_bottom">This is a beta feature powered by OpenAI technologies. <a href=""> How it works</a>
+                </p>
+            </div>
+            <div class="chat_svg" aria-hidden="true" class="air3-lottie caw-logo">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512"
+                    width="512" height="512" focusable="false" preserveAspectRatio="xMidYMid meet"
+                    style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;">
+                    <defs>
+                        <clipPath id="__lottie_element_953">
+                            <rect width="512" height="512" x="0" y="0"></rect>
+                        </clipPath>
+                        <g id="__lottie_element_962">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_968" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="-61.768001556396484" y1="33.569000244140625" x2="217.38099670410156"
+                            y2="-101.80999755859375">
+                            <stop offset="4%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="32%" stop-color="rgb(19,126,39)"></stop>
+                            <stop offset="61%" stop-color="rgb(19,84,78)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_962_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_962"></use>
+                        </mask>
+                        <g id="__lottie_element_969">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_975" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="-31.816999435424805" y1="126.50599670410156" x2="56.176998138427734"
+                            y2="-156.1179962158203">
+                            <stop offset="7%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="16%" stop-color="rgb(139,227,174)"></stop>
+                            <stop offset="25%" stop-color="rgb(133,225,170)"></stop>
+                            <stop offset="35%" stop-color="rgb(161,240,193)"></stop>
+                            <stop offset="44%" stop-color="rgb(189,255,215)"></stop>
+                            <stop offset="59%" stop-color="rgb(105,211,108)"></stop>
+                            <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="87%" stop-color="rgb(19,126,39)"></stop>
+                            <stop offset="100%" stop-color="rgb(19,84,78)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_969_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_969"></use>
+                        </mask>
+                        <g id="__lottie_element_976">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_982" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156"
+                            y2="-16.948999404907227">
+                            <stop offset="0%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="13%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="25%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="39%" stop-color="rgb(73,218,185)"></stop>
+                            <stop offset="52%" stop-color="rgb(1,205,190)"></stop>
+                            <stop offset="63%" stop-color="rgb(10,186,95)"></stop>
+                            <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="87%" stop-color="rgb(40,149,18)"></stop>
+                            <stop offset="100%" stop-color="rgb(60,130,36)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_984">
+                            <path fill="url(#__lottie_element_983)"
+                                d=" M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                            </path>
+                        </mask>
+                        <linearGradient id="__lottie_element_983" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156"
+                            y2="-16.948999404907227">
+                            <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0.30000001192092896"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="13%" stop-opacity="0.6499999761581421"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="25%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="39%" stop-opacity="0.6949999928474426"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="52%" stop-opacity="0.38999998569488525"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="63%" stop-opacity="0.4749999940395355"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="74%" stop-opacity="0.5600000023841858"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="87%" stop-opacity="0.7799999713897705"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_976_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_976"></use>
+                        </mask>
+                        <g id="__lottie_element_985">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_991" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="-61.768001556396484" y1="33.569000244140625" x2="217.38099670410156"
+                            y2="-101.80999755859375">
+                            <stop offset="4%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="32%" stop-color="rgb(19,126,39)"></stop>
+                            <stop offset="61%" stop-color="rgb(19,84,78)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_985_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_985"></use>
+                        </mask>
+                        <g id="__lottie_element_992">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_998" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="-31.816999435424805" y1="126.50599670410156" x2="56.176998138427734"
+                            y2="-156.1179962158203">
+                            <stop offset="7%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="16%" stop-color="rgb(139,227,174)"></stop>
+                            <stop offset="25%" stop-color="rgb(133,225,170)"></stop>
+                            <stop offset="35%" stop-color="rgb(161,240,193)"></stop>
+                            <stop offset="44%" stop-color="rgb(189,255,215)"></stop>
+                            <stop offset="59%" stop-color="rgb(105,211,108)"></stop>
+                            <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="87%" stop-color="rgb(19,126,39)"></stop>
+                            <stop offset="100%" stop-color="rgb(19,84,78)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_992_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_992"></use>
+                        </mask>
+                        <g id="__lottie_element_999">
+                            <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                                opacity="1" style="display: block;">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="rgb(255,255,255)" fill-opacity="1"
+                                        d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <linearGradient id="__lottie_element_1005" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156"
+                            y2="-16.948999404907227">
+                            <stop offset="0%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="13%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="25%" stop-color="rgb(145,230,179)"></stop>
+                            <stop offset="39%" stop-color="rgb(73,218,185)"></stop>
+                            <stop offset="52%" stop-color="rgb(1,205,190)"></stop>
+                            <stop offset="63%" stop-color="rgb(10,186,95)"></stop>
+                            <stop offset="74%" stop-color="rgb(20,168,0)"></stop>
+                            <stop offset="87%" stop-color="rgb(40,149,18)"></stop>
+                            <stop offset="100%" stop-color="rgb(60,130,36)"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_1007">
+                            <path fill="url(#__lottie_element_1006)"
+                                d=" M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                            </path>
+                        </mask>
+                        <linearGradient id="__lottie_element_1006" spreadMethod="pad" gradientUnits="userSpaceOnUse"
+                            x1="107.80799865722656" y1="17.402000427246094" x2="-146.48500061035156"
+                            y2="-16.948999404907227">
+                            <stop stop-color="rgb(255,255,255)" offset="0%" stop-opacity="0.30000001192092896"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="13%" stop-opacity="0.6499999761581421"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="25%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="39%" stop-opacity="0.6949999928474426"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="52%" stop-opacity="0.38999998569488525"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="63%" stop-opacity="0.4749999940395355"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="74%" stop-opacity="0.5600000023841858"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="87%" stop-opacity="0.7799999713897705"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                            <stop stop-color="rgb(255,255,255)" offset="100%" stop-opacity="1"></stop>
+                        </linearGradient>
+                        <mask id="__lottie_element_999_1" mask-type="alpha">
+                            <use xlink:href="#__lottie_element_999"></use>
+                        </mask>
+                    </defs>
+                    <g clip-path="url(#__lottie_element_953)">
+                        <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                            opacity="1" style="display: block;">
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                <path fill="rgb(255,255,255)" fill-opacity="1"
+                                    d=" M0,-85 C46.9114990234375,-85 85,-46.9114990234375 85,0 C85,46.9114990234375 46.9114990234375,85 0,85 C-46.9114990234375,85 -85,46.9114990234375 -85,0 C-85,-46.9114990234375 -46.9114990234375,-85 0,-85z M0,-115 C63.46849822998047,-115 115,-63.46849822998047 115,0 C115,63.46849822998047 63.46849822998047,115 0,115 C-63.46849822998047,115 -115,63.46849822998047 -115,0 C-115,-63.46849822998047 -63.46849822998047,-115 0,-115z">
+                                </path>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_999_1)" style="display: none;">
+                            <g transform="matrix(-1.4892162084579468,-1.554184913635254,1.554184913635254,-1.4892162084579468,262.75,247.5)"
+                                opacity="0.01698345490590228">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_1005)" mask="url(#__lottie_element_1007)"
+                                        fill-opacity="1"
+                                        d="M0 0 M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_992_1)" style="display: none;">
+                            <g transform="matrix(-1.7880805730819702,-1.3739697933197021,1.3739697933197021,-1.7880805730819702,267.96673583984375,240.97340393066406)"
+                                opacity="0.007000840025804536">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_998)" fill-opacity="1"
+                                        d=" M0,109.625 C60.54399871826172,109.625 109.625,60.54399871826172 109.625,0 C109.625,-60.54399871826172 60.54399871826172,-109.625 0,-109.625 C-60.54399871826172,-109.625 -109.625,-60.54399871826172 -109.625,0 C-109.625,60.54399871826172 -60.54399871826172,109.625 0,109.625z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_985_1)" style="display: none;">
+                            <g transform="matrix(-0.1376911997795105,-2.59985613822937,2.59985613822937,-0.1376911997795105,261.947509765625,247.54249572753906)"
+                                opacity="0.0578133047733364">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_991)" fill-opacity="1"
+                                        d=" M0,95.91200256347656 C52.97100067138672,95.91200256347656 95.91200256347656,52.97100067138672 95.91200256347656,0 C95.91200256347656,-52.97100067138672 52.97100067138672,-95.91200256347656 0,-95.91200256347656 C-52.97100067138672,-95.91200256347656 -95.91200256347656,-52.97100067138672 -95.91200256347656,0 C-95.91200256347656,52.97100067138672 -52.97100067138672,95.91200256347656 0,95.91200256347656z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_976_1)" style="display: block;">
+                            <g transform="matrix(1.7504345178604126,-1.2526910305023193,1.2526910305023193,1.7504345178604126,262.75,247.5)"
+                                opacity="1">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_982)" mask="url(#__lottie_element_984)"
+                                        fill-opacity="1"
+                                        d="M0 0 M0,117.5 C64.89299774169922,117.5 117.5,64.89299774169922 117.5,0 C117.5,-64.89299774169922 64.89299774169922,-117.5 0,-117.5 C-64.89299774169922,-117.5 -117.5,-64.89299774169922 -117.5,0 C-117.5,64.89299774169922 -64.89299774169922,117.5 0,117.5z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_969_1)" style="display: block;">
+                            <g transform="matrix(1.6080338954925537,-1.1507824659347534,1.1507824659347534,1.6080338954925537,267.4815979003906,254.38641357421875)"
+                                opacity="1">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_975)" fill-opacity="1"
+                                        d=" M0,109.625 C60.54399871826172,109.625 109.625,60.54399871826172 109.625,0 C109.625,-60.54399871826172 60.54399871826172,-109.625 0,-109.625 C-60.54399871826172,-109.625 -109.625,-60.54399871826172 -109.625,0 C-109.625,60.54399871826172 -60.54399871826172,109.625 0,109.625z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g mask="url(#__lottie_element_962_1)" style="display: block;">
+                            <g transform="matrix(1.618092656135559,-1.157981038093567,1.157981038093567,1.618092656135559,262.2823181152344,246.8465118408203)"
+                                opacity="1">
+                                <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                    <path fill="url(#__lottie_element_968)" fill-opacity="1"
+                                        d=" M0,95.91200256347656 C52.97100067138672,95.91200256347656 95.91200256347656,52.97100067138672 95.91200256347656,0 C95.91200256347656,-52.97100067138672 52.97100067138672,-95.91200256347656 0,-95.91200256347656 C-52.97100067138672,-95.91200256347656 -95.91200256347656,-52.97100067138672 -95.91200256347656,0 C-95.91200256347656,52.97100067138672 -52.97100067138672,95.91200256347656 0,95.91200256347656z">
+                                    </path>
+                                </g>
+                            </g>
+                        </g>
+                        <g transform="matrix(2.049999952316284,0,0,2.049999952316284,256.1654052734375,255.85169982910156)"
+                            opacity="1" style="display: block;">
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                <path fill="rgb(255,255,255)" fill-opacity="1"
+                                    d=" M0,84.70700073242188 C46.78200149536133,84.70700073242188 84.70700073242188,46.78200149536133 84.70700073242188,0 C84.70700073242188,-46.78200149536133 46.78200149536133,-84.70700073242188 0,-84.70700073242188 C-46.78200149536133,-84.70700073242188 -84.70700073242188,-46.78200149536133 -84.70700073242188,0 C-84.70700073242188,46.78200149536133 -46.78200149536133,84.70700073242188 0,84.70700073242188z">
+                                </path>
+                            </g>
+                        </g>
+                        <g transform="matrix(2.049999952316284,0,0,2.049999952316284,264.78155517578125,263.64990234375)"
+                            opacity="1" style="display: block;">
+                            <g opacity="1" transform="matrix(1,0,0,1,0,0)">
+                                <path fill="rgb(20,168,0)" fill-opacity="1"
+                                    d=" M24.079999923706055,4.616000175476074 C27.292999267578125,6.456999778747559 30.857999801635742,7.514999866485596 34.58000183105469,7.710999965667725 C34.58000183105469,7.710999965667725 34.58000183105469,7.75 34.58000183105469,7.75 C43.63100051879883,7.75 50.68299865722656,0.46299999952316284 50.68299865722656,-9.920000076293945 C50.68299865722656,-20.30299949645996 43.66999816894531,-27.59000015258789 34.58000183105469,-27.59000015258789 C25.489999771118164,-27.59000015258789 18.594999313354492,-21.71299934387207 16.166000366210938,-2.9070000648498535 C18.202999114990234,0.18799999356269836 20.867000579833984,2.7750000953674316 24.079999923706055,4.616000175476074z M55.42399978637695,-30.645999908447266 C58.12699890136719,-27.94300079345703 60.24300003051758,-24.690000534057617 61.65299987792969,-21.125 C61.65299987792969,-21.125 61.61399841308594,-21.125 61.61399841308594,-21.125 C63.06399917602539,-17.559999465942383 63.72999954223633,-13.758999824523926 63.652000427246094,-9.958999633789062 C63.72999954223633,-6.158999919891357 63.0629997253418,-2.3580000400543213 61.65299987792969,1.2070000171661377 C60.24300003051758,4.771999835968018 58.12699890136719,8.024999618530273 55.42399978637695,10.727999687194824 C52.72100067138672,13.470999717712402 49.46799850463867,15.586000442504883 45.90299987792969,17.075000762939453 C42.3380012512207,18.524999618530273 38.53799819946289,19.229999542236328 34.659000396728516,19.229999542236328 C34.659000396728516,19.229999542236328 33.444000244140625,19.229999542236328 33.444000244140625,19.229999542236328 C28.232999801635742,19.072999954223633 23.100000381469727,17.506000518798828 18.711999893188477,14.762999534606934 C17.027000427246094,13.784000396728516 15.420999526977539,12.64799976348877 13.932000160217285,11.394000053405762 C13.932000160217285,11.394000053405762 9.347999572753906,39.21200180053711 9.347999572753906,39.21200180053711 C9.347999572753906,39.21200180053711 -3.8550000190734863,39.21200180053711 -3.8550000190734863,39.21200180053711 C-3.8550000190734863,39.21200180053711 2.805000066757202,-0.0860000029206276 2.805000066757202,-0.0860000029206276 C-3.1110000610351562,-8.744999885559082 -7.460000038146973,-18.3439998626709 -10.12399959564209,-28.413000106811523 C-10.12399959564209,-28.413000106811523 -10.12399959564209,-9.762999534606934 -10.12399959564209,-9.762999534606934 C-10.12399959564209,7.241000175476074 -21.016000747680664,19.152000427246094 -36.6879997253418,19.152000427246094 C-40.37099838256836,19.270000457763672 -44.05400085449219,18.52400016784668 -47.42300033569336,17.11400032043457 C-50.79199981689453,15.704000473022461 -53.8489990234375,13.588000297546387 -56.31700134277344,10.885000228881836 C-61.2140007019043,5.164999961853027 -63.87799835205078,-2.2009999752044678 -63.643001556396484,-9.762999534606934 C-63.643001556396484,-9.762999534606934 -63.643001556396484,-37.54199981689453 -63.643001556396484,-37.54199981689453 C-63.643001556396484,-37.54199981689453 -50.79199981689453,-37.54199981689453 -50.79199981689453,-37.54199981689453 C-50.79199981689453,-37.54199981689453 -50.79199981689453,-9.762999534606934 -50.79199981689453,-9.762999534606934 C-50.79199981689453,0.46299999952316284 -45.62099838256836,7.75 -36.53099822998047,7.75 C-27.44099998474121,7.75 -22.85700035095215,0.3059999942779541 -22.85700035095215,-9.762999534606934 C-22.85700035095215,-9.762999534606934 -22.85700035095215,-37.54199981689453 -22.85700035095215,-37.54199981689453 C-22.85700035095215,-37.54199981689453 -0.32899999618530273,-37.54199981689453 -0.32899999618530273,-37.54199981689453 C1.1990000009536743,-30.725000381469727 3.510999917984009,-24.06399917602539 6.566999912261963,-17.795000076293945 C7.9770002365112305,-24.024999618530273 11.541999816894531,-29.58799934387207 16.674999237060547,-33.50600051879883 C21.808000564575195,-37.42399978637695 28.232999801635742,-39.46099853515625 34.698001861572266,-39.1870002746582 C38.53799819946289,-39.1870002746582 42.37699890136719,-38.481998443603516 45.94200134277344,-36.99300003051758 C49.46799850463867,-35.542999267578125 52.72100067138672,-33.3489990234375 55.42399978637695,-30.645999908447266z">
+                                </path>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <!-- chat hero end -->
+
+    <!-- Category start -->
+
+    <div class="category">
+        <div>
+            <div class="category_text">
+                <h1>Browse talent by category</h1>
+                <p>Looking for work? <a href="">Browse jobs</a></p>
+            </div>
+            <div class="box_category">
+
+                <div class="category_box">
+                    <h3>Development & IT </h3>
+                    <p>⭐4.85/5 <span>1853 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>AI Services </h3>
+                    <p>⭐4.8/5 <span>294 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Design & Creative </h3>
+                    <p>⭐4.91/5 <span>968 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Sales & Marketing </h3>
+                    <p>⭐4.77/5 <span>392 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Writing & Translation </h3>
+                    <p>⭐4.92/5 <span>505 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Admin & Customer </h3>
+                    <h3> Support</h3>
+                    <p>⭐4.77/5 <span>508 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Finance & Accounting</h3>
+                    <p>⭐4.79/5 <span>214 skills</span></p>
+                </div>
+                <div class="category_box">
+                    <h3>Engineering & </h3>
+                    <h3> Architecture</h3>
+                    <p>⭐4.85/5 <span>650 skills</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category end -->
+
+    <div class="detail_banner">
+        <div class="deatil_img">
+            <img src="./images/detail_banenr.png" alt="">
+        </div>
+        <div class="detail_text">
+            <h1>Up your work game, it's easy</h1>
+
+            <ul>
+                <li>
+                    <h5>No cost to join</h5>
+                </li>
+                <li>Register and browse professionals, explore projects, or even book a consultation</li>
+                <li>
+                    <h5>Post a job and hire top talent</h5>
+                </li>
+                <li>Finding talent doesn t have to be a chore. Post a job or we can search for you!</li>
+                <li>
+                    <h5>Work with the best--without breaking the bank</h5>
+                </li>
+                <li>Upwork makes it affordable to up your work and take advantage of low transaction rates.</li>
+            </ul>
+            <button style="background-color: #108A00; color: white;">Sign up for free</button>
+            <button style="background-color: transparent; border: 1px solid #108A00; color: #108A00;">Learn how to
+                hire</button>
+
+        </div>
+    </div>
+
+    <!-- detail_banner -->
+
+    <div class="for-enterprise-banner">
+        <div class="span-md-6 span-lg-8">
+            <div class="enterprise-container text-inverse">
+                <div>
+                    <p data-qa="headline" class="enterprise-headline">
+                        Enterprise Suite
+                    </p>
+                    <h1 data-qa="title" class="text-inverse display-rebrand enterprise-title">
+                        This is how
+                        <br> <span class="c-mint" style="color: bisque;">good companies<br>find good
+                            company.</span>
+                    </h1> <span data-qa="subtitle" class="enterprise-subtitle">
+                        Access the top 1% of talent on Upwork, and a full suite of hybrid workforce management tools.
+                        This is how innovation works now.
+                    </span>
+                </div>
+                <div class="enterprise-list">
+                    <div class="ent-more-details">
+                        <div class="d-flex mt-4x align-items-top"><img alt="vsuc_Skills_11"
+                                src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Skills.svg"
+                                class="mr-3x more-details-item-icon c-mint">
+                            Access expert talent to fill your skill gaps
+                        </div>
+                        <div class="d-flex mt-3x align-items-top"><img alt="vsuc_Control_12"
+                                src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Briefcase.svg"
+                                class="mr-3x more-details-item-icon c-mint">
+                            Control your workflow: hire, classify and pay your talent
+                        </div>
+                        <div class="d-flex mt-3x align-items-top"><img alt="vsuc_Support_13"
+                                src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/Support.svg"
+                                class="mr-3x more-details-item-icon c-mint">
+                            Partner with Upwork for end-to-end support
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center justify-space-between"><a href="/enterprise/"
+                            class="up-n-link air3-btn air3-btn-secondary c-forest enterprise-learn-more-btn">
+                            Learn more
+                        </a></div>
+                </div>
+            </div>
+        </div>
+        <div class="enterprise-image>
+            <picture>
+                <source srcset=" data:image/gif;base64,R0lGODlhAQABAAAAACwAAAAAAQABAAA=" media=" (max-width: 768px)">
+            <img loading="lazy"
+                src="https://res.cloudinary.com/upwork-cloud-acquisition-prod/image/upload/f_auto,q_auto/brontes/for-enterprise/enterprise-2023.jpg"
+                alt="enterprise-image" data-qa="image" class="enterprise-image d-none d-md-block">
+            </picture>
+        </div>
+    </div>
+
+    <!-- rebrand-delivery-models -->
+    <section class="rebrand-delivery-models">
+        <div class="bg-delivery-model">
+            <div class="air3-grid-container">
+                <div class="span-9 span-md-7 span-lg-7">
+                    <p data-qa="headline" class="vs-color-white headline mt-3x mt-md-0">For clients
+                    </p>
+                    <h2 data-qa="title" class="display-rebrand"><span>Find talent<br> your way</span></h2>
+                </div>
+            </div>
+            <div class="air3-grid-container">
+                <div class="span-md-7 span-lg-5">
+                    <p class="subtitle">Work with the largest
+                        network of independent professionals and get things done—from quick turnarounds to big
+                        transformations.</p>
+                </div>
+            </div>
+            <div class="delivery-model-card-container">
+                <div data-qa="delivery-model-card-post-job" class="delivery-model-card">
+                    <span class="model-title">Post a job<br> and hire a pro</span>
+                    <span class="model-name">
+                        <span class="model-name_sub">Talent
+                            Marketplace<sup>TM</sup></span> <svg width="15" height="15" viewBox="0 0 15 15"
+                            fill="#ffffff" xmlns="http://www.w3.org/2000/svg" data-qa="arrow"
+                            class="vertical-align-middle ml-2x">
+                            <path
+                                d="M7 0.5L5.775 1.725L10.675 6.625H0L0 8.375H10.675L5.775 13.275L7 14.5L14 7.5L7 0.5Z">
+                            </path>
+                        </svg></span>
+                </div>
+                <div class="delivery-model-card">
+                    <span class="model-title">Browse and<br> buy projects</span>
+                    <span class="model-name">
+                        <span>Project
+                            Catalog<sup>TM</sup></span> <svg width="15" height="15" viewBox="0 0 15 15" fill="#ffffff"
+                            xmlns="http://www.w3.org/2000/svg" data-qa="arrow" class="vertical-align-middle ml-2x">
+                            <path
+                                d="M7 0.5L5.775 1.725L10.675 6.625H0L0 8.375H10.675L5.775 13.275L7 14.5L14 7.5L7 0.5Z">
+                            </path>
+                        </svg></span>
+                </div>
+                <div class="span-md-4 delivery-model-card">
+                    <span class="model-title">Get advice from an <br class="d-lg-none">industry expert</span>
+                    <span class="mb-0 model-name">
+                        <span>Consultations</span>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="#ffffff"
+                            xmlns="http://www.w3.org/2000/svg" data-qa="arrow" class="vertical-align-middle ml-2x">
+                            <path
+                                d="M7 0.5L5.775 1.725L10.675 6.625H0L0 8.375H10.675L5.775 13.275L7 14.5L14 7.5L7 0.5Z">
+                            </path>
+                        </svg></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- rebrand-delivery-models -->
+
+    <!-- Business upwork -->
+
+    <div class="business-box">
+        <div class="business-box-left">
+            <h1 style="margin-bottom: 40px;">Why business <br /> turn to Upwork</h1>
+
+            <div class="business-box-list">
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 24 24"
+                            role="img">
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M11.7 7l1.2 3.2 3.5.2-2.7 2.2.9 3.4-2.9-1.9L8.8 16l.9-3.4L7 10.4l3.4-.2L11.7 7z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="heading"> Proof of quality</span>
+                    </li>
+                    <li>
+                        <span class="title">Check any pro work samples, client reviews, and identity <br />
+                            verification.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 24 24"
+                            role="img">
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M11.7 7l1.2 3.2 3.5.2-2.7 2.2.9 3.4-2.9-1.9L8.8 16l.9-3.4L7 10.4l3.4-.2L11.7 7z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="heading"> No cost until you hire</span>
+                    </li>
+                    <li>
+                        <span class="title">Interview potential fits for your job, negotiate rates, and only pay <br />
+                            for work you approve.</span>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" viewBox="0 0 24 24"
+                            role="img">
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M12 21a9 9 0 100-18 9 9 0 000 18z"></path>
+                            <path vector-effect="non-scaling-stroke" stroke="var(--icon-color, #001e00)"
+                                stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.5"
+                                d="M11.7 7l1.2 3.2 3.5.2-2.7 2.2.9 3.4-2.9-1.9L8.8 16l.9-3.4L7 10.4l3.4-.2L11.7 7z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        <span class="heading">Safe and secure</span>
+                    </li>
+                    <li>
+                        <span class="title">Focus on your work knowing we help protect your data and <br /> privacy.
+                            Were here with 24/7 support if you need it.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="business-box-right" style="position: relative;">
+            <img id="person" src="./images/person-with-headset.webp" alt="">
+            <div class="business-box-list-right">
+                <h1 style="margin-bottom: 40px;">We're<br />the world's work <br /> Marketplace</h1>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-star"></i>
+                        <span class="heading"> 4.9/5</span>
+                    </li>
+                    <li>
+                        <span class="title">Clients rate professionals on Upwork</span>
+                    </li>
+                    <li>
+                        <img src="./images/group.svg" alt="">
+                        <span class="heading">Award Winner</span>
+                    </li>
+                    <li>
+                        <span class="title">G2 2021 Best Software Awards</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Business upwork -->
+
+
+    <!-- greet work -->
+
+    <div class="greet-work">
+        <div class="greet-work-left">
+            <img src="./images/find-great-work@2x.webp" alt="">
+        </div>
+        <div class="greet-work-right">
+            <div class="heading"> For talent</div>
+            <div>
+                <h1 class="main-heading">Find great <br /> Work</h1>
+                <p style="color: white; font-size: 18px;">Meet clients you're excited to work with and take <br /> your
+                    career or business to new heights.</p>
+                <div class="subtitle">
+                    <div class="subtitle-greet">
+                        <p>Find opportunities for <br /> every stage of your <br /> freelance caree </p>
+                        <p>Control when, where, <br /> and how you work</p>
+                        <p>Explore different <br /> ways to earn</p>
+                    </div>
+                    <button
+                        style="padding: 10px 20px; border: none;background-color: white; color:#1f57c3; border-radius: 30px; font-weight: 500; margin-top: 20px;">Find
+                        opportunities</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- greet work -->
+
+    <!-- trusted brand -->
+    <div class="trusted" style="margin: 80px 120px 40px; ">
+        <h1 style="font-size: 60px;">Trusted by leading<br />brands and startups</h1>
+        <div class="trusted-box">
+            <div class="trusted-box-child">
+                <img src="./images/trusted-rleft.png" alt="">
+            </div>
+            <div class="trusted-box-child">
+                <img src="./images/trusted-right.png" alt="">
+
+            </div>
+
+        </div>
+    </div>
+    <!-- trusted brand -->
+
+    <!-- ukrain -->
+
+    <div class="ukrain-support" style="margin: 20px 120px;">
+        <img style="width: 100%; border-radius: 30px" ; src="./images/ukrain.png" alt="">
+    </div>
+
+    <!-- ukrain -->
+
+    <!-- links -->
+    <div class="links-list">
+        <ul class="links-heading">
+            <li style="color: #108A00;">Top skills</li>
+            <li>Trending skills</li>
+            <li>Top skills in US</li>
+            <li>Project CatalogTM</li>
+        </ul>
+        <ul>
+            <li>Generative AI Specialists</li>
+            <li>Data Entry Specialists</li>
+            <li>Video Editors</li>
+            <li>Data Analyst</li>
+            <li>Shopify Developer</li>
+            <li>Ruby on Rails Developer</li>
+            <li>Android Developer</li>
+            <li>Bookkeeper</li>
+            <li>Content Writer</li>
+            <li>Copywriter</li>
+            <li>Data Scientist</li>
+            <li>Front-End Developer</li>
+            <li>Game Developer
+            <li>Graphic Designer</li>
+            <li>iOS Developer</li>
+            <li>Java Developer</li>
+        </ul>
+        <ul>
+            <li>JavaScript Developer</li>
+            <li>Logo Designer</li>
+            <li>Mobile App Developer</li>
+            <li>PHP Developer</li>
+            <li>Python Developer</li>
+            <li>Resume Writer</li>
+            <li>SEO Expert</li>
+            <li>Social Media Manager</li>
+            <li>Software Developer</li>
+            <li>Software Engineer</li>
+            <li>Technical Writer</li>
+            <li>UI Designer</li>
+            <li>UX Designer</li>
+            <li>Virtual Assistant</li>
+            <li>Web Designer</li>
+            <li>Wordpress Developer</li>
+        </ul>
+    </div>
+    <!-- links -->
+
+    <!-- Body -->
+
+    <!-- Footer -->
+
+    <div class="footer" style="margin: 0 120px;background-color: #001e00;color: white;">
+        <div class="footer-links">
+            <ul>
+                <li>For Clients</li>
+                <li>How to Hire</li>
+                <li>Talent Marketplace</li>
+                <li>Project Catalog</li>
+                <li>Hire an Agency</li>
+                <li>Enterprise</li>
+                <li>Any Hire</li>
+                <li>Contract-to-Hire</li>
+                <li>Direct Contracts</li>
+                <li>Hire Worldwide</li>
+                <li>Hire in the USA</li>
+            </ul>
+            <ul>
+                <li>For Talent</li>
+                <li>How to Find Work</li>
+                <li>Direct Contracts</li>
+                <li>Find Freelance Jobs Worldwide</li>
+                <li>Find Freelance Jobs in the USA</li>
+            </ul>
+            <ul>
+                <li>Resources</li>
+                <li>Help & Support</li>
+                <li>Success Stories</li>
+                <li>Upwork Reviews</li>
+                <li>Resources</li>
+                <li>Blog</li>
+                <li>Community</li>
+                <li>Affiliate Program</li>
+                <li>Free Business tools</li>
+            </ul>
+            <ul>
+                <li>Company</li>
+                <li>About Us</li>
+                <li>Leadership</li>
+                <li>Investor Relations</li>
+                <li>Careers</li>
+                <li>Our Impact</li>
+                <li>Press</li>
+                <li>Contact Us</li>
+                <li>Trust, Safety & Security</li>
+                <li>Modern Slavery Statement</li>
+            </ul>
+        </div>
+
+        <div class="footer-follow">
+            <img style="width: 100%;" src="./images/footer-follow.png" alt="">
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+
+
+    <script src="https://kit.fontawesome.com/47a467df51.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

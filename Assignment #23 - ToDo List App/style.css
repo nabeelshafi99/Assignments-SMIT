@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.container {
+    color: white;
+    background-color: rebeccapurple;
+    border: 1px solid black;
+    width: 500px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.todoHead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todoHead input {
+    width: 100%;
+    padding: 10px 0 10px 20px;
+    border-radius: 30px;
+    margin: 10px 0;
+    outline: none;
+    border: 1px solid black;
+
+}
+
+.inputBtn button {
+    padding: 5px 40px;
+    margin: 0 10px;
+    border-radius: 30px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border: none;
+}
+
+.todoBody {
+    margin: 15px 0;
+    height: 420px;
+    overflow: auto;
+}
+
+#todoList li {
+    display: flex;
+    background-color: white;
+    margin: 10px 0;
+    border-radius: 20px;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+#todoList li input{
+    padding: 5px 0 5px 20px;
+    width: 60%;
+    border-radius: 30px;
+    border: none;
+    background-color: transparent;
+}
+#todoList li input:focus{
+    outline: none;
+}
+
+#todoList li button{
+    border: none;
+    padding: 5px 20px;
+    background-color: rgb(230, 230, 233);
+}
+#todoList li #removeBtn{
+    padding: 5px 20px;
+}

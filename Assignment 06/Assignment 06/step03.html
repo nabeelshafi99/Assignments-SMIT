@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 01 | Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="form">
+        <div class="steps">
+            <span class="step" style="background-color: rgb(222, 201, 148);" >Step 1: Account</span>
+            <span class="step" style="background-color: rgb(222, 201, 148);">Step 2: Personal Details</span>
+            <span class="step" style="background-color: blue;">Step 3: Your Review</span>
+        </div>
+        <form action="">
+            <fieldset>
+                <legend>Your Review</legend>
+                <br>
+                <label for="qurry">How did you hear about us?</label>
+                <select id="qurry" required>
+                    <option disabled selected>Select Your Option</option>
+                    <option>Good</option>
+                    <option>Bad</option>
+                </select>
+                <br>
+                <br>
+                <label>Would you visit again?</label>
+                <br>
+                <input type="radio" required id="yes" name="review"> 
+                <label for="yes">Yes</label>
+                <input type="radio" required id="no" name="review"> 
+                <label for="no">No</label>
+                <input type="radio" required id="maybe" name="review"> 
+                <label for="maybe">Maybe</label>
+                <br>
+                <br> 
+                <label for="comments">Comments:</label>
+                <br> 
+                <textarea name="comments" required id="comments" cols="30" rows="10"></textarea>
+                <br>
+                <br>
+                <label for="file">Documents:</label>
+                <br>
+                <input type="file" required class="input" id="file">
+                <br>
+                <br>
+                <input type="checkbox" required id="checkbox">
+                <label for="checkbox">Sign me up for email updates</label>
+                <br>
+                <br>
+                <a href="./step02.html">
+                    <img src="Images/back.png" alt="" class="btn">
+                </a>
+                <a href="./index.html">
+                    <img src="Images/submit.png" alt="" class="btn">
+                </a>       
+            </fieldset>
+        </form>
+    </div>
+
+
+</body>
+</html>

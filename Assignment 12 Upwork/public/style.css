@@ -1,0 +1,715 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+/* Font */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+
+/* header start */
+
+
+.header {
+    width: 100%;
+}
+
+.navbar {
+    border-bottom: 1px solid gray;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.logo img {
+    height: 24px;
+}
+
+.navbar div {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 0 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nav_search {
+    position: relative;
+    left: 100px;
+}
+
+.nav_search input {
+    width: 300px;
+    padding: 12px 40px;
+    border: 1px solid #7f7979;
+    border-radius: 30px;
+}
+
+.search_icon {
+    font-size: 16px;
+    position: relative;
+    left: 50px;
+}
+
+#search_text {
+    border-left: 1px solid rgb(204, 194, 194);
+    padding: 4px 20px;
+    position: relative;
+    right: 100px;
+
+    /* border-radius: 30px; */
+
+}
+
+.button button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    background-color: transparent;
+    font-size: 14px;
+}
+
+.button i {
+    display: none;
+}
+
+.nav_list li {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 0 10px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+/* header end */
+
+/* body start */
+
+.main_container {
+
+    display: flex;
+    justify-content: center;
+}
+
+/* hero banner */
+
+.hero_banner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+    gap: 200px;
+}
+
+.hero_text {
+    color: #14A800;
+}
+
+.hero_image {
+    display: flex;
+    flex: 1;
+    width: 500px;
+}
+
+.hero_image img {
+    width: 100%;
+}
+
+.hero_text h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.hero_text p {
+    margin: 5px 0;
+    font-size: 22px;
+    color: black;
+    line-height: 30px;
+    font-weight: 400;
+}
+
+.hero_text button ,.detail_banner button {
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    border: none;
+    margin: 20px 0;
+}
+
+.trust {
+    margin-top: 30px;
+}
+
+.trust p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.trust img {
+    height: 40px;
+    padding: 0 20px;
+}
+
+/* hero banner */
+
+/* chat_hero start */
+
+.main_caw {
+    display: flex;
+    justify-content: center;
+    margin: 50px 150px;
+
+}
+
+.caw_hero {
+    background: #91e6b3;
+    background: linear-gradient(100deg, #aceace, #48e1cf, #cf9dbb, #70e4ce, #88e4c5);
+    background-size: 200% 200%;
+    padding: 40px 40px;
+    border-radius: 30px 30px 30px 100px;
+    width: 100%;
+    position: relative;
+}
+
+.caw_hero h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.caw_hero p,
+.caw_hero button {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+.chat_svg {
+    width: 120px;
+    margin: 20px 0;
+}
+
+.chat_hero {
+    background-color: white;
+    border-radius: 0 30px 30px 30px;
+    position: absolute;
+    top: 180px;
+    left: 180px;
+    width: 80%;
+    padding: 20px 60px 60px;
+    min-height: 300px;
+    max-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+a {
+    color: #14A800;
+}
+
+#caw_bottom {
+    font-size: 12px;
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+.chat_hero button {
+    display: block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #14A800;
+    color: #14A800;
+    font-weight: 500;
+
+}
+
+/* chat_hero end */
+
+
+/* Category start */
+
+.category {
+    margin: 200px 100px;
+}
+
+.category_text h1 {
+    margin: 0 40px;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.category_text p {
+    margin: 20px 40px;
+    font-size: 18px;
+}
+
+.box_category {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category_box {
+    background-color: #F7FAF7;
+    padding: 40px 40px 40px;
+    margin: 20px;
+    border-radius: 10px;
+}
+.category_box h3 {
+    font-size: 22px;
+    font-weight: 500;
+}
+.category_box p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+.category_box span {
+    padding: 0 40px;
+}
+
+
+/* Category end */
+
+.detail_banner{
+    position: relative;
+    top: -100px;
+    display: flex;
+    justify-content:center ;
+}
+.detail_text{
+    margin-left: 50px;
+}
+.detail_text h1{
+    font-size: 36px;
+    font-weight: 500;
+}
+.detail_text h5{
+    font-size: 22px;
+    font-weight: 500;
+}
+.detail_text li{
+    list-style: none;
+    margin: 20px 0;
+}
+
+
+/* for enterprise */
+.for-enterprise-banner{
+    margin: -10px 120px;
+    background-color: #514f4f;
+    display: flex;
+    flex: 4;
+    border-radius: 20px;
+}
+.text-inverse{
+    padding: 40px;
+    color: white;
+}
+.text-inverse p{
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+.text-inverse h1,.c-mint{
+    font-size: 48px;
+    position: relative;
+    left: -10px;
+}
+.enterprise-subtitle{
+    font-size: 20px;
+    margin: 10px 0;
+}
+.enterprise-image{
+    width: 500px;
+    height: 100%;
+    border-radius:0 20px 20px 0;
+    object-fit: cover;
+}
+
+.enterprise-list{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 10px 0;
+}
+.enterprise-list a{
+    padding: 10px 40px;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: white;
+}
+/* for enterprise */
+
+/* rebrand */
+
+.rebrand-delivery-models{
+    margin: 80px 120px;
+    padding-left: 40px;
+    background-color: #514f4f;
+    display: flex;
+    align-items: center;
+    height: 600px;
+    border-radius: 20px;
+    background-image: url('./images/rebrand.jpg');
+    background-position: 70%  10%;
+    background-size: cover;
+    position: relative; 
+}
+.rebrand-delivery-models .headline{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    font-size: 22px;
+    color: white;
+    font-weight: 500;
+}
+.display-rebrand span{
+    font-size: 40px;
+    color: white;
+}
+
+.delivery-model-card-container{
+    display: flex;
+    gap: 40px;
+
+}
+.delivery-model-card span{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.delivery-model-card{
+    background-color: #138604;
+    color: white;
+    position: relative;
+    bottom: -80px;
+    padding: 10px 40px;
+}
+.delivery-model-card .model-name_sub{
+    display: block;
+    font-size: 14px;
+}
+.subtitle{
+    font-size: 20px;
+    color: white;
+    position: relative;
+    top: 40px;
+    display: block;
+    width: 450px;
+}
+
+
+/* rebrand */
+
+
+/* business box */
+
+.business-box{
+    display: flex;
+    margin: 0 120px;
+    gap: 40px;
+}
+.business-box-left{
+    background-color: #F7FAF7;
+    /* width: 200px;
+    height: 200px; */
+    flex: 2;
+    border-radius: 5px;
+    padding: 60px 20px;
+}
+.business-box-right{
+    background-color: #14A800;
+    /* width: 200px;
+    height: 200px; */
+    flex: 1;
+    border-radius: 5px;
+    
+}
+.business-box-left h1{
+    font-size: 48px;
+}
+
+.business-box-list svg{
+    margin: 20px 0;
+    width: 24px;
+    height: 24px;
+}
+.business-box-list li{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+}
+.business-box-list .heading{
+    font-size: 26px;
+    font-weight: 500;
+}
+.business-box-list .title{
+    padding-left: 40px;
+    font-size: 18px;
+}
+
+.business-box-list-right {
+    position: absolute;
+    bottom: 10%;
+    color: white;
+    padding-left: 40px;
+}
+.business-box-list-right h1{
+    font-size: 30px;
+}
+.business-box-list-right li{
+    display: flex;
+    gap: 20px;
+    margin: 10px 0; 
+}
+.business-box-list-right i,.business-box-list-right .heading {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+#person{
+    width: 90%;
+    position: absolute;
+    left: -300px;
+    top: 20px;
+}
+
+/* business box */
+
+/* greet-work */
+
+.greet-work{
+    display: flex;
+    margin: 40px 120px;
+}
+.greet-work-left{
+    background-color: green;
+    
+    flex: 1;
+    border-radius: 5px;
+}
+.greet-work-left img{
+    width: 100%;
+    height: 100%;
+}
+.greet-work-right{
+    background-color: #1f57c3;
+    /* width: 200px;
+    height: 200px; */
+    flex: 1;
+    border-radius: 5px;
+    display: flex;
+    position: relative;
+    align-items: center ;
+    padding: 0 20px;
+}
+.greet-work-right .heading{
+    font-size: 22px;
+    color: white;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.greet-work-right .main-heading{
+    font-size: 60px;
+    color: white;
+    margin-bottom: 40px;
+}
+.subtitle{
+    width: 100%;
+    border-top: 1px solid white;
+    position: relative;
+    top:100px ;
+}
+.subtitle-greet{
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+.subtitle-greet p{
+    font-size: 18px;
+}
+
+
+/* greet-work */
+
+
+/* Trusted */
+
+    .trusted-box{
+        /* background-color: #514f4f; */
+        display: flex;
+        gap: 40px;
+    }
+    .trusted-box-child{
+        overflow: hidden;
+        margin-top: 20px;
+        flex: 1;
+        height: 90%;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+    }
+    .trusted-box-child img{
+        width: 100%;
+    }
+
+/* Trusted */
+
+/* body end */
+
+/* links */
+.links-list{
+    margin-top: 100px;
+    padding: 0 120px 40px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid gray;
+}
+.links-list li{
+    list-style: none;
+    font-size: 18px;
+    margin: 10px 0;
+}
+.links-heading li{
+    font-size: 36px;
+    margin: 20px 0;
+    font-weight:bold;
+    color: rgb(197, 190, 190);
+}
+/* links */
+
+/* footer */
+.footer-links{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 100px;
+}
+.footer-links li{
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 0;
+}
+/* footer */
+
+/* Media Qurry */
+
+@media screen and (min-width:576px) {
+    /* body{
+        background-color: red;
+    } */
+
+}
+
+@media screen and (min-width:576px) {
+    /* body {
+        background-color: green;
+    } */
+}
+
+@media screen and (min-width:768px) {
+    /* body {
+        background-color: blue;
+    } */
+}
+
+@media screen and (max-width:992px) {
+
+    /* body {
+        background-color: yellow;
+    }   */
+    .hero_image {
+        display: none;
+    }
+
+    .hero_banner {
+        display: block;
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:1200px) {
+
+    /* body {
+        background-color: pink;
+    } */
+    .navbar li,
+    .nav_search input,
+    .nav_search i,
+    .button #login,
+    .nav_list {
+        display: none;
+    }
+
+    .button i {
+        display: block;
+        font-size: 18px;
+    }
+
+    .hero_banner {
+        margin-top: 80px;
+    }
+
+
+}
+
+@media screen and (max-width:1400px) {
+    /* body {
+        background-color: orange;
+    } */
+}
+
+.chat_bot {
+    position: fixed;
+    width: 100px;
+    bottom: 20px;
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media (min-width: 700px)
+.caw-embedded .chat-hero[data-v-eaa3ceac] {
+    border-radius: 20px 20px 20px 8em;
+    height: 400px;
+}
+
+.caw-embedded .chat-hero[data-v-eaa3ceac] {
+    height: 324px;
+    position: relative;
+    align-content: flex-start;
+    background: #91e6b3;
+    background: linear-gradient(100deg,#aceace,#48e1cf,#cf9dbb,#70e4ce,#88e4c5);
+    background-size: 200% 200%;
+    animation: gradientAnimation-eaa3ceac 8s ease-out infinite;
+    animation-direction: alternate;
+    border-radius: 24px;
+} */
+
+/* <g transform="matrix(-1.8917936086654663,-1.2272496223449707,1.2272496223449707,-1.8917936086654663,267.4305419921875,240.5787811279297)" opacity="0.1231179512103357"><g opacity="1" transform="matrix(1,0,0,1,0,0)"><path fill="url(#__lottie_element_998)" fill-opacity="1" d=" M0,109.625 C60.54399871826172,109.625 109.625,60.54399871826172 109.625,0 C109.625,-60.54399871826172 60.54399871826172,-109.625 0,-109.625 C-60.54399871826172,-109.625 -109.625,-60.54399871826172 -109.625,0 C-109.625,60.54399871826172 -60.54399871826172,109.625 0,109.625z"></path></g></g> */

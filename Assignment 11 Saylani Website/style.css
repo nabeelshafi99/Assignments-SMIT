@@ -1,0 +1,367 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('./fonts/Poppins/Poppins-Regular.ttf');
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: poppins, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.moreInfo{
+    background-color: #eeeeee;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+    overflow: hidden;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    margin: 0 20px;
+}
+
+.moreInfo button{
+    padding: 10px 10px;
+    background-color:white;
+    border: none;
+}
+
+
+.navbar{
+    border-bottom: 1px solid #827b7b;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+.logo img {
+    height: 50px;
+}
+.navbar-menu{
+    display: flex;
+    align-items: center;
+}
+.navbar-menu li {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 14px;
+}
+
+.navbar-btn button {
+    padding: 10px 30px;
+    margin: 0 2px;
+    border-radius: 5px;
+    border: none;
+    background-color: #0d6db7;
+    color: white;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+.banner-img,.banner-text{
+    margin:40px 20px;
+}
+.banner-img img{
+    max-height: 520px;
+}
+.banner-text h1{
+    width: 400px;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.banner-text h1 span{
+    color: #8dc63f;
+}
+.banner-text h2{
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+.banner-text h2 span{
+    color: #0d6db7;
+}
+.banner-text p {
+    font-size: 16px;
+}
+.banner-text button {
+    padding: 15px 50px;
+    margin: 20px 2px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+}
+
+.donate{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 120px;
+}
+
+.donate-box{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: rgba(182,239,73,.2);
+
+}
+.donate-box button {
+    font-size: 12px;
+    padding: 15px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+}
+.donate-box label, .donate-box input {
+    padding: 15px 20px;
+    background-color: white;
+    border: none;
+    /* border-radius: 10px; */
+}
+.donate-box label{
+    background-color: black;
+    color: white;
+    margin: 0 -10px;
+}
+
+.donate-box button{
+    margin: 0 10px;
+}
+.donate-box .btn{
+    background-color: #8dc63f;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+}
+
+.banner-2{
+    margin: 20px 0;
+    padding: 0 120px;   
+}
+.banner-2 img{
+    display: flex;
+    height: 560px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.box3,.highlight ,.other-project ,.summary ,.say-flash {
+    margin: 20px 0;
+    padding: 0 120px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box3-card{
+    width: 160px;
+    height: 90px;
+    background-color: #f0fcdb;
+    position: relative;
+    font-size: 14px;
+    padding: 20px 20px 50px;
+    margin: 40px 10px;
+}
+.box3-text {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+.box-card img{
+    width: 70px;
+}
+.highlight-img{
+    border-radius: 10px;
+    position: relative;
+    margin-left: 20px;
+}
+.highlight-img img{
+    border-radius: 10px;
+    width: 100%;
+    opacity: .8;
+}
+.highlight-text{
+    position: absolute;
+    bottom: 10px;
+    color: white;
+    width: 100%;
+    text-align: start;
+    padding: 0 20px;
+}
+.highlight-text button{
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    font-size: 18px;
+    background-color: #8dc63f;
+    color: white;
+    border: none;
+}
+
+.other-project h1{
+    text-align: left;
+    margin: 20px 0;
+}
+
+.otherproject-img{
+    position: relative;
+}
+.otherproject-img img{
+    height: 450px;
+    border-radius:60px 0 0 0  ;
+    margin-right: 20px;
+}
+.otherbox{
+    display: flex;
+    justify-content: flex-start;
+    text-align: start;
+    font-size: 16px;
+}
+.box-text{
+    margin-left:20px;
+}
+.box-text h5{
+    font-size: 16px;
+    color: #0d6db7;
+    margin: -10px 0 10px;
+}
+.box-text p{
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.otherbox img{
+    width: 40px;
+}
+.otherproject-front{
+    width: 100%;
+    height: 10%;
+    position: relative;
+    display: flex;
+    color: white;
+    font-size: 22px;
+}
+.box-front{
+    border-radius:60px 0 0 0  ;
+    padding:60px 10px;
+    width: 50%;
+    position: absolute;
+    background-color: #8dc63f;
+    
+}
+.summary-body{
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.summary-bg {
+    width: 100%;
+    height: 400px;
+    background-color: #0d6db7;
+}
+.summary-bg img{
+    opacity: .5;
+    
+}
+.summary-width{
+    display: flex;
+    justify-content: space-around;
+}
+.sum-img{
+    padding: 30px;
+    background-color: white;
+    margin: 0 100px 20px; 
+    border-radius: 50%;
+}
+.summary-main{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+.sum-text h3{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.say-flash .img {
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px 70px;
+}
+.say-btn button{
+    margin: 20px 10px;
+    font-size: 36px;
+    font-weight: bold;
+    padding: 10px 20px;
+}
+.guide{
+    margin: 10px 120px;
+}
+.guide-body{
+    padding: 20px 0;
+    background-color: #0d6db7;
+    text-align: center;
+    color: white;
+}
+.guide-body input {
+    width: 600px;
+    padding: 20px 20px;
+    background-color: #0d6db7;
+    border: 1px solid white;
+    color: white;
+}
+.guide-body button{
+    margin: 10px 0;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    width: 640px;
+    height: 40px;
+}
+
+.footer{
+    background:#424242 url('./images/summary bg.png');
+    background-position: 50% 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding:20px 120px;
+}
+.container .row{
+    display: flex;
+    justify-content: space-around;
+}
+.container li{
+    list-style: none;
+    font-size: 18px;
+    margin-left: -20px;
+}
+.social_icons{
+    display: flex;
+}
+.social_icons, .footer_logo ,.footer_about{
+    margin: 40px 0;
+}
