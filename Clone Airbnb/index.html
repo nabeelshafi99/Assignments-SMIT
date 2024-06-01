@@ -35,8 +35,8 @@
                 </ul>
             </div>
             <div class="navAcc d-flex gap-4 align-items-center justify-content-end  h-100">
-                <a href="#" class="text-dark">Airbnb your home</a>
-                <button class="rounded-5 border-0">
+                <a href="#" class="text-dark d-none d-md-block">Airbnb your home</a>
+                <button class="rounded-5 border-0 d-none d-md-block">
                     <i class="fa-solid fa-globe"></i>
                 </button>
                 <button class="d-flex border-0 gap-3 align-items-center py-2 px-3 rounded-5">
@@ -45,8 +45,11 @@
                 </button>
             </div>
         </nav>
-        <div
-            class="searchBox mb-5 shadow d-flex justify-content-between px-5 py-2 align-items-center rounded-5 gap-5 w-50">
+
+        <div class="searchContainer mt-4">
+            <div class="searchBox mb-5 shadow d-flex justify-content-between px-5 py-2 align-items-center rounded-5 gap-5 w-100">
+                
+                <p class="mobOnly d-flex d-lg-none my-0 fw-bold text-body-tertiary align-items-center ">Search</p>
 
             <div class="d-flex justify-content-center flex-column">
                 <h6 class="my-0 py-0">Where</h6>
@@ -69,10 +72,11 @@
             </button>
 
         </div>
+    </div>
 
     </div>
 
-    <div class="categoryIcon container my-4 ">
+    <div class="categoryIcon container my-4 d-none d-md-block">
 
         <ul class="d-flex gap-3 list-unstyled my-3 justify-content-center">
             <li class="border-bottom">
@@ -127,7 +131,7 @@
 
         <div class="row">
 
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -139,7 +143,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -152,7 +156,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -164,7 +168,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -177,7 +181,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -189,7 +193,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -202,7 +206,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -214,7 +218,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -227,7 +231,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -239,7 +243,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -252,7 +256,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card1.png" class="card-img-top object-fit-cover" style="height: 18rem;" alt="...">
                     <div class="card-body">
@@ -264,7 +268,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-3 d-flex justify-content-center my-4">
+            <div class="col-12 col-md-6 col-lg-3 d-flex justify-content-center my-4">
                 <div class="card" style="width: 20rem; ">
                     <img src="./image/card2.webp" class="card-img-top object-fit-cover" style="height: 18rem;"
                         alt="...">
@@ -286,7 +290,7 @@
     <!-- footer -->
 <div class="bg-body-tertiary">
     <div class="border-bottom d-flex flex-column justify-content-center align-items-center mt-3 bg-body-tertiary">
-        <div class="container py-5">
+        <div class="container py-5 d-none d-md-block">
             <h5>Inspiration for future getaways</h5>
             <ul class="d-flex list-unstyled gap-4 fooFlist my-4">
                 <li class="fw-bold text-decoration-underline">Popular</li>
@@ -379,8 +383,8 @@
         </div>
     </div>
 
-        <div class="d-flex justify-content-between container bg-body-tertiary py-4">
-            <span class="">
+        <div class="d-flex justify-content-between container bg-body-tertiary py-4 footerText">
+            <span class="textRes">
                 © 2024 Airbnb, Inc.·Terms - Sitemap - PrivacyYour - Privacy Choices
             </span>
             <span class="d-flex gap-3">
