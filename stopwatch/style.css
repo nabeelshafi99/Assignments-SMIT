@@ -1,0 +1,40 @@
+body{
+    background: linear-gradient(to right , #6a11cb, #2575fc);
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.displyTime{
+    font-size: 5em;
+    color: #fff;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#lap , #reset{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttons i{
+    font-size: 16px !important;
+}
+
+#start i {
+    font-size: 18px !important;
+} 
