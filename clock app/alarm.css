@@ -18,8 +18,6 @@ body{
 
 .tableBox{
     background-color: #fff;
-    max-height: 40%;
-    border-radius: 10px;
 }
 
 .activeLink{
@@ -49,31 +47,27 @@ body{
     font-size: 1.5rem;
 }
 
+.alarmBox{
+    background-color: rgba(255, 255, 255, .3);
+    border-radius: 10px;
+}
 
 .displayContainer{
-    height: 150px;
+    height: 300px;
     
 }
 
-.stopwatchDisplay{
-    font-size: 3rem;
-    font-weight: bold;
-}
 
-.buttons{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+input[type=time] {
     border: none;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    background-color: transparent;
+  }
+ input[type="time"]::-webkit-calendar-picker-indicator {
+    background: none;
+    border: none;
+    outline: none;
 }
 
-.play{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    
-}

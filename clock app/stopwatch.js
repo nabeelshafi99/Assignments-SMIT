@@ -26,6 +26,16 @@ var run = false;
 var arr = [];
 var lapcounter = 0;
 
+
+function fixedNum(num) {
+    if (num < 10) {
+        return '0' + num
+    } else {
+        return num
+    }
+}
+
+
 function startfun() {
     if (!run) {
         playbtn.innerHTML = '<i class="fa-solid fa-pause"></i>'
@@ -34,23 +44,17 @@ function startfun() {
             milliseconds.innerHTML = millisec
             if (millisec == 100) {
                 sec++
-                if (sec < 10) {
-                    seconds.innerHTML = '0' + sec
-                }
+                    seconds.innerHTML = fixedNum(sec)
                 millisec = '00'
 
                 if (sec > 59) {
                     min++
-                    if (sec < 10) {
-                        minutes.innerHTML = '0' + min
-                    }
+                        minutes.innerHTML = fixedNum(min)
                     sec = '00'
                 }
                 if (min > 59) {
                     hrs++
-                    if (sec < 10) {
-                        hours.innerHTML = '0' + hrs
-                    }
+                    hours.innerHTML = fixedNum(hrs)
                     min = '00'
                 }
             }
@@ -83,7 +87,7 @@ function resetfun() {
 }
 
 function lapfun() {
-    arr.push(hours.innerHTML + " : " + minutes.innerHTML + " : " + seconds.innerHTML)
+    arr.push(fixedNum(hrs) + ":" + fixedNum(min) + ":" + fixedNum(sec))
     table.innerHTML += `<tr> <td>${lapcounter}</td> 
     <td> ${arr[lapcounter]} </td> </tr>`
     lapcounter++
