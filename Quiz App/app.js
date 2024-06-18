@@ -241,10 +241,13 @@ function navQuiz() {
 
 function timer() {
     var displayTimer = document.getElementById('displayTimer')
+    var progress = document.getElementById('progress')
     sec--
+    progress.style.width = `${(sec/60)*100}%`
     displayTimer.innerHTML = fixedNum(sec)
     if (sec == 0) {
         sec = 60
+        progress.style.width = `100%`
         count++
         navQuiz()
     }
