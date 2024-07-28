@@ -1,0 +1,22 @@
+.btnMS {
+    font-size: 0.8rem !important;
+    font-weight: 700;
+}
+
+#listinput {
+    background-color: transparent;
+}
+
+
+.auth {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.formBox {
+    min-width: 250px;
+    max-width: 320px;
+    width: 80%;
+}

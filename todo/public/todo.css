@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    color: black;
+}
+h1{
+    font-size: 32px;
+    text-align: center;
+}
+.con{
+    padding: 60px;
+    width: 800px;
+    margin: 10px auto;
+    background-color: green;
+    /* border: 1px solid red; */
+    border-radius: 20px;
+    /* text-align: center; */
+}
+.listpanel{
+    display: flex;
+    justify-content: space-around;
+    padding: 30px;
+}
+.todoinput {
+    padding: 5px 30px;
+    border-radius: 20px;
+    width: 400px;
+}
+#listinput {
+    border: none;
+    background-color: transparent;
+    color: black;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    padding:10px 40px;
+    list-style: none;
+}
+.btn {
+    padding:10px;
+    border-radius: 20px;
+    background-color: rgba(7, 231, 164, 0.575);
+}
