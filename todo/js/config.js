@@ -1,8 +1,9 @@
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
-import { getFirestore, addDoc, getDocs, setDoc, collection, doc, deleteDoc, updateDoc, } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+import { getFirestore, addDoc , getDoc, getDocs, setDoc, collection, doc, deleteDoc, updateDoc, } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import { getStorage , ref , uploadBytes ,getDownloadURL  ,getMetadata} from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
 
 
 const firebaseConfig = {
@@ -20,14 +21,17 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app);
+const storage = getStorage(app);
 
 export {
   db,
   collection,
   getDocs,
+  getDoc,
   setDoc,
   addDoc,
   doc,
   deleteDoc, updateDoc,
-  auth,createUserWithEmailAndPassword , signInWithEmailAndPassword
+  auth,createUserWithEmailAndPassword , signInWithEmailAndPassword,
+  storage,ref, uploadBytes,getDownloadURL ,getMetadata
 }

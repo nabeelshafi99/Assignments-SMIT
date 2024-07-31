@@ -1,14 +1,14 @@
 import { auth,createUserWithEmailAndPassword,signInWithEmailAndPassword , setDoc,doc ,db } from "./config.js";
 
 if(localStorage.userid){
-    window.location.replace("./homepage.html")
+    window.location.replace("../pages/homepage.html")
 }
 
 const authBtn = (authFlag) => {
     if(!authFlag){
-        window.location.href = "./index.html"
+        window.location.href = "../index.html"
     }else{
-        window.location.href = "./signup.html"
+        window.location.href = "../pages/signup.html"
     }
 }
 
@@ -37,7 +37,7 @@ const signupBtn = async () => {
     email.value = "";
     password.value = "";
     alert("Signup Successfully")
-    window.location.href = "./index.html"
+    window.location.href = "../index.html"
 
     } catch (error) {
         alert(error.message)
@@ -54,7 +54,7 @@ const logInBtn = async () => {
        email.value = "";
        password.value = "";
         alert("Login Successfully")
-       window.location.replace("./homepage.html")
+       window.location.replace("../pages/homepage.html")
         
     } catch (error) {
        alert(error.message)
