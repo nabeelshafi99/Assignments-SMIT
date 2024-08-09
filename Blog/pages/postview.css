@@ -1,0 +1,13 @@
+.postViewImg{
+    width: 100%;
+    height: 400px !important;
+    border: 1px solid red;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.postViewImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}

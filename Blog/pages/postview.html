@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post view</title>
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/1a2cf13d4a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="./postview.css">
+</head>
+
+<body>
+
+
+  <!-- header -->
+  <div class="headerBox">
+    <div class="container">
+
+      <div>
+        <h4 class="m-0">
+          <a href="#">NSBLOG</a>
+        </h4>
+      </div>
+      <div class="d-block d-md-none">
+        <button data-bs-toggle="offcanvas" data-bs-target="#mobCanva" aria-controls="mobCanva" class="btn"><i
+            class="fa-solid fa-bars-staggered"></i></button>
+      </div>
+      <div class="d-none d-md-flex justify-content-center menuParent">
+        <ul class="menu fw-semibold gap-4 m-0">
+          <li>
+            <a href="../index.html">Home</a>
+          </li>
+          <li>
+            <a href="./blog.html" >Blog</a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-none d-md-flex gap-3" id="navDes">
+        <button data-bs-toggle="modal" data-bs-target="#createPost" class="btn rounded-0 fw-semibold">Create
+          Post</button>
+        <button class="btn btn-dark rounded-0 fw-semibold">Signout</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Desktop -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="canvaRight" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="w-100 d-flex flex-column align-items-center">
+
+        <div class="pr-md-img shadow" id="prMdImg">
+
+          <i class="fa-solid fa-user fs-2"></i>
+
+        </div>
+        <input type="file" id="prImg" onchange="setImg()" class="d-none">
+        <label for="inputState" class="form-label mt-2">Nabeel Shafi</label>
+
+
+        <div class="my-3 w-100 gap-4 ">
+          <ul class="d-flex list-unstyled flex-column align-items-center fw-semibold desMenu m-0">
+            <li class="border-bottom">
+              <input type="text" value="nabeel@gmail.com" class="form-control readonly text-center">
+            </li>
+
+            <li class="border-bottom">
+              <input type="text" value="Male" class="form-control readonly text-center">
+            </li>
+
+            <li class="border-bottom">
+              <input type="text" value="11-06-2024" class="form-control readonly text-center">
+            </li>
+
+            <li class="border-bottom">
+              <input type="text" value="Pakistan" class="form-control readonly text-center">
+            </li>
+
+            <li class="border-bottom">
+              <input type="text" value="Karachi" class="form-control readonly text-center">
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="d-flex justify-content-center align-items center">
+        <button onclick="signOut()" class="btn btn-outline-dark">Signout</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="mobCanva" aria-labelledby="offcanvasRightLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="w-100 d-flex flex-column align-items-center">
+
+        <div class="pr-md-img shadow" id="prMdImg">
+
+          <i class="fa-solid fa-user fs-2"></i>
+
+        </div>
+        <input type="file" id="prImg" onchange="setImg()" class="d-none">
+        <label for="inputState" class="form-label mt-2">Nabeel Shafi</label>
+
+
+        <div class="my-3 w-100 d-block gap-4 d-md-none">
+          <ul class="mobMenu d-flex list-unstyled flex-column align-items-center fw-semibold desMenu m-0">
+            <li>
+              <a data-bs-toggle="offcanvas" data-bs-target="#canvaRight" aria-controls="canvaRight"
+                href="javascript:void(0)">Profile</a>
+            </li>
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="javascript:void(0)" class="active">Blog</a>
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="d-flex justify-content-center align-items center">
+        <button onclick="signOut()" class="btn btn-outline-dark">Signout</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Create Blog Post</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+
+          <div class="mb-3">
+            <label for="postTitle" class="form-label">Post Title</label>
+            <input type="text" oninput="testPost()" class="form-control" id="postTitle" placeholder="Enter post title">
+          </div>
+          <div class="mb-3">
+            <label for="postDescription" class="form-label">Post Description</label>
+            <textarea class="form-control" oninput="testPost()" placeholder="Enter post description"
+              id="postDescription" rows="3"></textarea>
+          </div>
+
+          <select id="category" onchange="testPost()" class="form-select" aria-label="Default select example">
+            <option hidden value="" selected>Select Category</option>
+            <option value="javascript">Javascript</option>
+            <option value="python">Python</option>
+            <option value="php">Php</option>
+            <option value="node">Node</option>
+            <option value="firebase">Firebase</option>
+          </select>
+
+          <div class="my-3 d-flex gap-4">
+            <div class="form-check">
+              <input value="public" class="form-check-input" type="radio" name="isPrivate" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Public
+              </label>
+            </div>
+            <div class="form-check">
+              <input value="private" class="form-check-input" type="radio" name="isPrivate" id="flexRadioDefault2">
+              <label class="form-check-label" for="flexRadioDefault2">
+                Private
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-3 d-flex gap-4">
+
+            <div class="d-flex gap-4 align-items-center">
+              <div onclick="imgInvoke()" class="upImg d-flex justify-content-center align-items-center"><i
+                  class="fa-solid fa-plus fs-3"></i></div>
+              <div id="imgName">Upload image</div>
+
+              <input type="file" hidden onchange="testPost()" type="file" id="UploadImage">
+            </div>
+
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button disabled id="postBtn" onclick="posted()" type="button" class="btn btn-dark px-4">Post</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- main -->
+  <div class="mainBox my-2">
+
+
+    <!-- content -->
+    <div class="mt-5 container">
+      <div class="row">
+        <div class="col-12 col-md-8" id="homeUi">
+          <div class="postViewImg"></div>
+          <div class="my-4">
+            <h5></h5>
+            <p></p>
+          </div>
+        </div>
+        <div id="relatedPost" class="col-12 col-md-4 border d-none gap-3 flex-column d-md-flex align-items-center">
+
+          <!-- <div>
+
+              <div class="card" style="width: 16rem;">
+                <img src=${data[i].blogImage} class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h6 class="card-title">${data[i].title.slice(0, 20)}...</h6>
+                  <p class="card-text">${data[i].description.slice(0, 25)}...</p>
+                 
+                </div>
+              </div>
+
+          </div> -->
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+
+  </div>
+
+  </div>
+
+  <!-- fiooter -->
+  <div class="container-fluid">
+
+    <div class="footerBox mt-4">
+
+      <div class="d-none d-md-flex align-items-center pt-2 flex-column">
+
+        <div class="footer-heading fw-bold my-2">Let's get started on something great</div>
+        <div class="footer-subheading mb-4">Join over 4,000+ startups already growing with Untitled</div>
+        <div class="d-none d-md-flex gap-3 " id="footerBtn">
+          <a href="./pages/login.html" class="btn btn-outline-light rounded-0 fw-semibold">LOGIN</a>
+          <a href="./pages/signup.html" class="btn btn-outline-light rounded-0 fw-semibold">SIGNUP</a>
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-logo fw-semibold  py-4 py-md-0 pb-md-2 text-center">Copyrights © 2024 NSBLOG. All Rights
+          Reserved.</div>
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+</body>
+
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script type="module" src="../js/postview.js"></script>
+
+
+</html>

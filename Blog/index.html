@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/1a2cf13d4a.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <div class="mainContainer">
+
+    <!-- header -->
+    <div class="headerBox">
+      <div class="container">
+
+        <div>
+          <h4 class="m-0">
+            <a href="#">NSBLOG</a>
+          </h4>
+        </div>
+        <div class="d-block d-md-none">
+          <button  data-bs-toggle="offcanvas" data-bs-target="#mobCanva" aria-controls="mobCanva" class="btn"><i class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+        <div class="d-none d-md-flex justify-content-center menuParent">
+          <ul class="menu fw-semibold gap-4 m-0">
+            <li>
+              <a href="javascript:void(0)" class="active">Home</a>
+            </li>
+            <li>
+              <a href="./pages/blog.html">Blog</a>
+            </li>
+          </ul>
+        </div>
+        <div class="d-none d-md-flex gap-3 " id="navDes">
+          <a href="./pages/login.html" class="btn rounded-0 fw-semibold">Login</a>
+          <a href="./pages/signup.html" class="btn btn-dark rounded-0 fw-semibold">Signup</a>
+        </div>
+
+      </div>
+    </div>
+
+
+
+     <!-- Desktop -->
+     <div class="offcanvas offcanvas-end" tabindex="-1" id="canvaRight" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="w-100 d-flex flex-column align-items-center">
+
+          <div class="pr-md-img shadow" id="prMdImg">
+
+            <i class="fa-solid fa-user fs-2"></i>
+
+          </div>
+          <input type="file" id="prImg" onchange="setImg()" class="d-none">
+          <label for="inputState" class="form-label mt-2">Nabeel Shafi</label>
+
+
+          <div class="my-3 w-100 gap-4 ">
+            <ul class="d-flex list-unstyled flex-column align-items-center fw-semibold desMenu m-0">
+              <li class="border-bottom">
+                <input type="text" value="nabeel@gmail.com" class="form-control readonly text-center">
+              </li>
+
+              <li class="border-bottom">
+                <input type="text" value="Male" class="form-control readonly text-center">
+              </li>
+
+              <li class="border-bottom">
+                <input type="text" value="11-06-2024" class="form-control readonly text-center">
+              </li>
+
+              <li class="border-bottom">
+                <input type="text" value="Pakistan" class="form-control readonly text-center">
+              </li>
+
+              <li class="border-bottom">
+                <input type="text" value="Karachi" class="form-control readonly text-center">
+              </li>
+
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center align-items center">
+          <button onclick="signOut()" class="btn btn-outline-dark">Signout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- mobile -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="mobCanva" aria-labelledby="offcanvasRightLabel">
+      <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="w-100 d-flex flex-column align-items-center">
+
+          <div class="pr-md-img shadow" id="prMdImg">
+
+            <i class="fa-solid fa-user fs-2"></i>
+
+          </div>
+          <input type="file" id="prImg" onchange="setImg()" class="d-none">
+          <label for="inputState" class="form-label mt-2">Nabeel Shafi</label>
+
+
+          <div class="my-3 w-100 d-block gap-4 d-md-none">
+              <ul class="mobMenu d-flex list-unstyled flex-column align-items-center fw-semibold desMenu m-0">
+                <li>
+                  <a data-bs-toggle="offcanvas" data-bs-target="#canvaRight" aria-controls="canvaRight" href="javascript:void(0)">Profile</a>
+                </li>
+                <li>
+                  <a href="javascript:void(0)">Home</a>
+                </li>
+                <li>
+                  <a href="./pages/blog.html" class="active">Blog</a>
+                </li>
+                <li>
+                  <a href="#">About</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                
+              </ul>
+          </div>
+
+        </div>
+
+        <div class="d-flex justify-content-center align-items center">
+          <button onclick="signOut()" class="btn btn-outline-dark">Signout</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="createPost" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" id="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <div class="mb-3">
+              <label for="postTitle" class="form-label">Post Title</label>
+              <input type="text" oninput="testPost()" class="form-control" id="postTitle" placeholder="Enter post title">
+            </div>
+            <div class="mb-3">
+              <label for="postDescription" class="form-label">Post Description</label>
+              <textarea class="form-control" oninput="testPost()" placeholder="Enter post description" id="postDescription" rows="3"></textarea>
+            </div>
+
+            <select id="category" onchange="testPost()" class="form-select" aria-label="Default select example">
+              <option hidden value="" selected>Select Category</option>
+              <option value="javascript">Javascript</option>
+              <option value="python">Python</option>
+              <option value="php">Php</option>
+              <option value="node">Node</option>
+              <option value="firebase">Firebase</option>
+            </select>
+
+            <div class="my-3 d-flex gap-4">
+              <div class="form-check">
+                <input value="false" onchange="testPost()" class="form-check-input" type="radio" name="isPrivate" id="flexRadioDefault1" >
+                <label class="form-check-label" for="flexRadioDefault1">
+                  Public
+                </label>
+              </div>
+              <div class="form-check">
+                <input value="true" onchange="testPost()" class="form-check-input" type="radio" name="isPrivate" id="flexRadioDefault2" >
+                <label class="form-check-label" for="flexRadioDefault2">
+                  Private
+                </label>
+              </div>
+            </div>
+
+            <div class="mb-3 d-flex gap-4">
+            
+              <div class="d-flex gap-4 align-items-center">
+                <div onclick="imgInvoke()" class="upImg d-flex justify-content-center align-items-center"><i class="fa-solid fa-plus fs-3"></i></div>
+                <div id="imgName">Upload image</div>
+             
+                <input type="file" hidden onchange="testPost()" type="file"  id="UploadImage">
+              </div>
+
+            </div> 
+
+          </div>
+          <div class="modal-footer">
+            <button disabled id="postBtn" onclick="posted()" type="button" class="btn btn-dark px-4">Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- main -->
+    <div class="mainBox my-2">
+
+      <!-- banner -->
+      <div class="bannerBox">
+
+        <div class="bannerContent">
+
+          <h2>NS BLOG</h2>
+          <p class="w-75">Explore programming insights, coding tips & latest tech updates on NS BLOG. improve your skills & join the community!</p>
+        </div>
+
+      </div>
+
+      <!-- content -->
+      <div class="mt-5">
+
+        <div class="container">
+          <h5 class="text-center mb-4">Recent blog post</h5>
+
+          <div class="row gy-3" id="homeUi">
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 d-flex justify-content-center">
+
+              <div class="card" aria-hidden="true" style="width: 16rem;">
+                <div class="placeholder placeholdeImg"></div>
+                <div class="card-body">
+                  <h5 class="card-title placeholder-glow">
+                    <span class="placeholder col-6"></span>
+                  </h5>
+                  <p class="card-text placeholder-glow">
+                    <span class="placeholder col-7"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-4"></span>
+                    <span class="placeholder col-6"></span>
+                    <span class="placeholder col-8"></span>
+                  </p>
+                  <div class="card-text my-0 py-0 fw-semibold d-flex gap-3 align-items-center">
+                    <div class="pr-sm-img placeholder col-8"></div>
+                    <div class="placeholder col-2"></div>
+                    <div class="placeholder col-2"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- fiooter -->
+    <div class="container-fluid">
+
+      <div class="footerBox mt-4">
+
+        <div class="d-none d-md-flex align-items-center pt-2 flex-column">
+
+          <div class="footer-heading fw-bold my-2">Let's get started on something great</div>
+          <div class="footer-subheading mb-4">Join over 4,000+ startups already growing with Untitled</div>
+          <div class="d-none d-md-flex gap-3 " id="footerBtn">
+            <a href="./pages/login.html" class="btn btn-outline-light rounded-0 fw-semibold">LOGIN</a>
+            <a href="./pages/signup.html" class="btn btn-outline-light rounded-0 fw-semibold">SIGNUP</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-logo fw-semibold  py-4 py-md-0 pb-md-2 text-center">Copyrights © 2024 NSBLOG. All Rights
+            Reserved.</div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+
+</body>
+
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script type="module" src="./app.js"></script>
+
+
+</html>

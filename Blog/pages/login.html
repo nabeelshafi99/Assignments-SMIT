@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NSBLOG | LOGIN</title>
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/1a2cf13d4a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="./login.css">
+</head>
+
+<body>
+
+    <div class="mainContainer">
+
+        <div class="row shadow rounded-5">
+            <div class="col-12 col-md-6 d-none d-md-block left-side bg-ino border-end p-4">
+
+                <div class="d-flex flex-column gap-2">
+                    <h4>NSBLOG</h4>
+                    <h6>Log in</h6>
+                    <p class="w-75 fw-light ">Use your Email and Password.</p>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 bg-succes right-side p-4">
+                <div>
+                    <h4 class="d-block d-md-none text-center my-3">NSBLOG</h4>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" oninput="testEmail()" class="form-control" id="email" aria-describedby="emailHelp">
+                        <div id="emailValidate" class="form-text text-danger d-none">Please enter correct email.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" oninput="testEmail()" class="form-control" id="password">
+                        <div id="passwordValidate" class="form-text text-danger d-none">Please enter correct email.
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)">Forget password?</a>
+                    <div class="d-flex align-items-center justify-content-end gap-3 mt-4">
+                        <div>
+                            <a href="./signup.html" class="btn px-4 fw-semibold rounded-0" id="createaccBtn">Create account</a>
+                        </div>
+                        <div>
+                            <button id="btn" disabled onclick="loginHandle()"  class="btn btn-dark px-4 fw-semibold rounded-0">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</body>
+
+
+<!-- bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+
+<script type="module" src="../js/auth.js"></script>
+
+
+</html>
